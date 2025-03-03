@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/landing_about.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/footer.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/header.css' %}">
+  
+    <title>Rivan | About</title>
+</head>
+<body>
+
+    {% include 'nav_templates/header.html' %}
+    <div class="bg_cover">
+        <img src="{% static 'images/landing_about/cover_about.svg' %}" alt="">
+    </div>
+
+    <div class="blank_layer">
+    </div>
+
+    <div class="about_rivan">
+        <h1>ABOUT</h1>
+        <p>The Rivan Cyber Institute empowers individuals to seamlessly enter the IT industry and attain expertise in diverse fields. Our core emphasis lies in cutting-edge technologies, spanning Cyber Security, Network Engineering, DevOps, and beyond, fostering comprehensive skill development.</p>
+        
+        
+        <div class="about_training">
+
+  <div class="accordion">
+    <h2>Trainings We Provide:</h2>
+
+    <!-- Item 1 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc1" />
+      <label for="acc1" class="accordion-label">Linux Security and Hardening</label>
+      <div class="accordion-content">
+        <p>
+          Learn best practices to secure Linux servers, implement firewalls,
+          manage user permissions, and more.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc2" />
+      <label for="acc2" class="accordion-label">Network Engineer: CCNA Track</label>
+      <div class="accordion-content">
+        <p>
+          A comprehensive track covering network fundamentals, routing, switching,
+          and exam prep for CCNA certification.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc3" />
+      <label for="acc3" class="accordion-label">VMWare – Sphere 7</label>
+      <div class="accordion-content">
+        <p>
+          Hands-on training for VMware vSphere 7, focusing on virtualization, 
+          management, and deployment of virtual machines.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc4" />
+      <label for="acc4" class="accordion-label">Complete Cyber Security Analysts</label>
+      <div class="accordion-content">
+        <p>
+          Dive into threat analysis, security monitoring, and incident response 
+          to become a proficient cyber security analyst.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc5" />
+      <label for="acc5" class="accordion-label">Incident Response for Cyber Professionals</label>
+      <div class="accordion-content">
+        <p>
+          Master techniques and strategies for quick and effective cyber incident 
+          response and digital forensics.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="accordion-item">
+      <input type="checkbox" id="acc6" />
+      <label for="acc6" class="accordion-label">Penetration Testing the right way</label>
+      <div class="accordion-content">
+        <p>
+          Learn ethical hacking methodologies, penetration testing tools, and 
+          real-world scenarios for testing system vulnerabilities.
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <div class="we_provide">
+        <h2>Training We Provide</h2>
+        <p>The Rivan Cyber Institute empowers individuals to seamlessly enter the IT industry and attain expertise in diverse fields. Our core emphasis lies in cutting-edge technologies, spanning Cyber Security, Network Engineering, DevOps, and beyond, fostering comprehensive skill development.</p>
+    </div>
+
+        </div>
+
+    </div>
+    
+    {% include 'nav_templates/footer.html' %}
+
+    <script>
+        // script for nav
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+if (window.scrollY > 200) { 
+navbar.classList.add('scrolled'); 
+} else {
+navbar.classList.remove('scrolled'); 
+}
+});
+
+</script>
+
+</body>
+</html>

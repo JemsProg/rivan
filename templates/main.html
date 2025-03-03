@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/main.css' %}">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <header class="nav-top">
+        {% include 'base/nav_elements/nav_top.html' %}
+
+    </header>
+  
+
+    <div class="content">
+
+        <!-- left nav -->
+        <div class="nav-left">
+            {% include 'base/nav_elements/nav_left.html' %}
+        </div>
+
+        <!-- Div for main content -->
+        <div class="main_content">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+
+        <!-- right nav -->
+        <div class="nav-right">
+            {% include 'base/nav_elements/nav_right.html' %}
+        </div>
+
+    </div>
+
+</body>
+</html>

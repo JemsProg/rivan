@@ -1,0 +1,31 @@
+{% load static %}
+
+<header>
+  <div class="logo">
+      <img src="{% static 'images/rivan_logo.png' %}" alt="Rivan Security Logo">
+      <h1>RIVANCYBER</h1>
+  </div>
+  
+  <!-- Burger Icon -->
+  <div class="burger-menu" onclick="toggleMenu()">
+      &#9776;
+  </div>
+
+  <nav id="nav-menu">
+      <a href="{% url 'landing' %}">HOME</a>
+      <a href="{% url 'landingCourse' %}">COURSES</a>
+      <a href="{% url 'landingAbout' %}">ABOUT</a>
+  </nav>
+
+  <div class="auth-buttons">
+      <a href="{% url 'quotation_quote' %}" class="btn_quotation">QUOTATION</a>
+  </div>
+</header>
+
+<script>
+    function toggleMenu() {
+        var nav = document.getElementById("nav-menu");
+        nav.classList.toggle("show-nav");
+    }
+  </script>
+  

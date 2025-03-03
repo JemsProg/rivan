@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/landing_course.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/footer.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/header.css' %}">
+
+    <title>Rivan | Course</title>
+</head>
+<body>
+    {% include 'nav_templates/header.html' %}
+    <div class="bg_cover">
+        <img src="{% static 'images/landing_course/cover_img.svg' %}" alt="">
+    </div>
+
+    <div class="blank_layer">
+
+    </div>
+
+    <div class="rivan_offer">
+        <div class="offer_content" id="network_training">
+            <img class="img_icon" src="{% static 'images/landing_course/7.png' %}" alt="icon1">
+            <h1>NETWORK TRAINING</h1>
+            <P>At RivanCyber Training Institute, we specialize in equipping you with the knowledge to deploy cutting-edge network solutions in real-world environments. Our training portfolio includes an extensive collection of courses on Cisco, Fortinet, Palo Alto Networks, F5, HP, and other industry-leading technologies, ensuring you stay ahead in the dynamic field of networking</P>
+        </div>
+
+        <div class="offer_content" id="network_service">
+            <img  class="img_icon" src="{% static 'images/landing_course/8.png' %}" alt="icon2">
+            <h1>SECURITY TRAINING</h1>
+            <P>Does your current network align with industry best practices? Are you seeking an optimized design tailored to your organization’s unique requirements? At RivanCyber, we provide comprehensive Network Assessment and Design services to evaluate, optimize, and create robust network topologies that meet the highest standards of efficiency and security.</P>
+        </div>
+
+        <div class="offer_content" id="network_automation">
+            <img  class="img_icon" src="{% static 'images/landing_course/9.png' %}" alt="icon3">
+            <h1>NETWORK AUTOMATION</h1>
+            <P>Enhance your network operations with our Network Automation and NetDevOps Programming services. From CLI scripts to web-based applications, we deliver automated solutions for configuration, monitoring, and secure backups. Our expertise ensures your network is always optimized for peak performance. Let RivanCyber make your network efficient and future-ready.</P>
+        </div>
+    </div>
+
+    <div class="course_page">
+
+        <h1 class="course_title">COURSE OFFER</h1>
+        <div class="course_content">
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/1.svg' %}" alt="course_1">
+            <h1>PCNSA</h1>
+            <h3>Palo Alto Networks</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a>Learn More</a>
+          </div>
+    
+    
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/2.svg' %}" alt="course_3">
+            <h1>CCNA</h1>
+            <h3>200-301 CCNA v1.1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a>Learn More</a>
+          </div>
+    
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/3.svg' %}" alt="course_3">
+            <h1>CCNP</h1>
+            <h3>ENCOR x ENARSI</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a href="#" >Learn More</a>
+          </div>
+    
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/4.svg' %}" alt="course_4">
+            <h1>CCNP</h1>
+            <h3>SECURITY 350-701</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a>Learn More</a>
+          </div>
+    
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/5.svg' %}" alt="course_4">
+            <h1>COMPTIA</h1>
+            <h3>SECURITY + SY0-701</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a>Learn More</a>
+          </div>
+    
+          <div class="courese_name">
+            <img src="{% static 'images/course_logo/6.svg' %}" alt="course_4">
+            <h1>ITIL v4/V3</h1>
+            <h3>FOUNDATION TRAINING</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <a>Learn More</a>
+          </div>
+      </div>
+    </div>
+    
+    
+    
+
+
+    {% include 'nav_templates/footer.html' %}
+
+
+    <script>
+            // script for nav
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) { 
+    navbar.classList.add('scrolled'); 
+  } else {
+    navbar.classList.remove('scrolled'); 
+  }
+});
+
+    </script>
+
+</body>
+</html>

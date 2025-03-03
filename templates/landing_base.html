@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing.css' %}">
+  <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/footer.css' %}">
+  <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/landing_page/header.css' %}">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <title>Rivan Technological Institute</title>
+
+</head>
+<body>
+
+    <!-- S-Shape SVG Background -->
+    <div class="background">
+      <img src="{% static 'images/background.svg' %}" alt="Background Image">
+    </div>
+
+    {% include 'nav_templates/header.html' %}
+
+
+  <!-- Landing Section -->
+  <div class="landing">
+    <div class="landing-logo">
+      <img src="{% static 'images/rivan_bg.png' %}" alt="Rivan Logo">
+    </div>
+    <div class="landing-content">
+      <h1>RIVAN TECHNOLOGICAL INSTITUTE</h1>
+      <p>Nurturing Tech Skills and Fostering Professional Growth for Tomorrow’s Leaders.</p>
+      <a href="{% url 'quotation_quote' %}" class="btn">QUOTATION</a>
+    </div>
+  </div>
+
+  <div class="about_section">
+    <div class="about_1">
+      <div>
+        <img src="{% static 'images/icons_about/we_discover.png'%}" alt="icon1">
+        <h2>WE DEVELOP</h2>
+        <P>Empowering IT individuals to reach their full potential.</P>
+      </div>
+
+      <div>
+        <img src="{% static 'images/icons_about/we_nurture.png'%}" alt="icon1">
+        <h2>WE NURTURE</h2>
+        <P>Fostering growth and innovation in the ever-evolving world of Information Technology.</P>
+      </div>
+
+      <div>
+        <img src="{% static 'images/icons_about/we_discover.png'%}" alt="icon1">
+        <h2>WE DISCOVER</h2>
+        <P>Uncovering the brightest minds in the IT landscape.</P>
+      </div>
+
+    </div>
+
+    <div class="about_2">
+      <img src="{%static 'images/landing_about2.png'%}" alt="">
+
+    </div>
+
+    <div class="about_3">
+      <p>RivanCyber is dedicated to empowering IT professionals, 
+        fostering innovation, and uncovering exceptional talent across 
+        the ever-evolving tech landscape. Through skill development, growth 
+        opportunities, and a commitment to discovering and showcasing potential, 
+        we strive to create a dynamic and inclusive community. Our goal is to 
+        drive progress, inspire breakthroughs, and shape a future where 
+        Information Technology continues to transform lives and industries.</p>
+
+    </div>
+  </div>
+
+
+  <div class="partners_page">
+    <h2 class="partner_txt">PARTNERS</h2>
+    <p>Through strategic alliances and valued partnerships, we unite expertise and innovation to drive impactful outcomes and mutual success.</p>
+
+    <div class="carousel-container">
+      <div class="carousel">
+          <div class="carousel-item">
+              <img src="{% static 'images/partners_logo/accenture.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/aws.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/bdo.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/bir.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/cisco.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/comptia.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/sitel.png' %}" alt="Partner 1">
+          </div>
+
+          <div class="carousel-item">
+            <img src="{% static 'images/partners_logo/smart.png' %}" alt="Partner 1">
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+  <div class="course_page">
+    <h1 class="course_title">COURSE OFFER</h1>
+<!-- Swiper Carousel Container -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/1.svg' %}" alt="course_1">
+        <h1>PCNSA</h1>
+        <h3>Palo Alto Networks</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a>Learn More</a>
+      </div>
+    </div>
+
+
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/2.svg' %}" alt="course_3">
+        <h1>CCNA</h1>
+        <h3>200-301 CCNA v1.1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a>Learn More</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/3.svg' %}" alt="course_3">
+        <h1>CCNP</h1>
+        <h3>ENCOR x ENARSI</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a href="#" >Learn More</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/4.svg' %}" alt="course_4">
+        <h1>CCNP</h1>
+        <h3>SECURITY 350-701</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a>Learn More</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/5.svg' %}" alt="course_4">
+        <h1>COMPTIA</h1>
+        <h3>SECURITY + SY0-701</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a>Learn More</a>
+      </div>
+    </div>
+
+    <div class="swiper-slide">
+      <div class="courese_name">
+        <img src="{% static 'images/course_logo/6.svg' %}" alt="course_4">
+        <h1>ITIL v4/V3</h1>
+        <h3>FOUNDATION TRAINING</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <a>Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Add Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+  </div>
+
+
+
+  <script>
+    // script for nav
+const navbar = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 200) { 
+    navbar.classList.add('scrolled'); 
+  } else {
+    navbar.classList.remove('scrolled'); 
+  }
+});
+
+
+// script for partners
+document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    const items = [...carousel.children]; 
+    const duplicateItems = items.map(item => item.cloneNode(true)); 
+
+    duplicateItems.forEach(clone => carousel.appendChild(clone)); 
+});
+
+// script for courses 
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 3, // Number of slides visible at once
+    spaceBetween: 30, // Space between slides
+    loop: true, // Infinite looping
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      375: { slidesPerView: 1 }, // 1 Slide on Mobile
+      640: { slidesPerView: 1 }, // 1 Slide on Mobile
+      768: { slidesPerView: 2 }, // 2 Slides on Tablet
+      1024: { slidesPerView: 3 }, // 3 Slides on Desktop
+    },
+  });
+
+
+
+
+
+  
+  </script>
+
+
+{% include 'nav_templates/footer.html' %}
+
+
+</body>
+</html>
