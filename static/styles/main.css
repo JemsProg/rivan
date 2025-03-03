@@ -1,0 +1,36 @@
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .content{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
+        width: 900px;
+    }
+
+
+    .nav-left {
+        position: sticky
+    }
+    .nav-left {
+        position: sticky
+    }
+    .nav-left {
+        position: sticky
+    }

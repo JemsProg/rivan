@@ -1,0 +1,198 @@
+/* Universal box-sizing reset for consistency */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Background image container */
+.bg_cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg_cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blank layer (if needed for spacing) */
+.blank_layer {
+  width: 100%;
+  height: 300px;
+}
+
+/* Main about section */
+.about_rivan {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 40px 150px;
+}
+
+/* Responsive Padding */
+@media (max-width: 1024px) {
+  .about_rivan {
+      padding: 40px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_rivan {
+      padding: 30px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_rivan {
+      padding: 20px;
+  }
+}
+
+/* Training section container */
+.about_training {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Ensure flex items align properly */
+@media (max-width: 768px) {
+  .about_training {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Accordion container */
+.accordion {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Each item in the accordion */
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Hide the default checkbox */
+.accordion-item input[type="checkbox"] {
+  display: none;
+}
+
+/* The label that acts like a button to open/close the accordion */
+.accordion-label {
+  display: block;
+  background-color: #1f3b58; /* Dark Blue */
+  color: #fff;
+  padding: 14px 20px;
+  cursor: pointer;
+  position: relative;
+  font-weight: bold;
+}
+
+/* Hover effect on the label */
+.accordion-label:hover {
+  background-color: #2d4f73;
+}
+
+/* The plus/minus sign using pseudo-elements */
+.accordion-label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Change the plus to minus when checkbox is checked */
+.accordion-item input[type="checkbox"]:checked + .accordion-label::after {
+  content: "-";
+}
+
+/* The content that’s revealed when checkbox is checked */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 20px;
+}
+
+/* Expand the content when the checkbox is checked */
+.accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+  max-height: 200px;
+  padding: 20px;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+/* "We Provide" text block */
+.we_provide {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .accordion {
+      max-width: 100%;
+  }
+
+  .accordion-label {
+      font-size: 16px;
+      padding: 12px 18px;
+  }
+
+  .accordion-label::after {
+      font-size: 18px;
+  }
+
+  .accordion-content {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-label {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+
+  .accordion-label::after {
+      right: 15px;
+      font-size: 16px;
+  }
+
+  .accordion-content {
+      font-size: 12px;
+      padding: 15px;
+  }
+}

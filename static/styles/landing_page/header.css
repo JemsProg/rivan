@@ -1,0 +1,132 @@
+/* General Header Styling */
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  background-color: transparent;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 999;
+  padding: 10px 20px;
+}
+
+/* Change header background when scrolled */
+header.scrolled {
+  background-color: #002147;
+  opacity: 1;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.logo h1 {
+  font-size: 24px;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #6edbff;
+  text-decoration: underline;
+}
+
+/* Authentication Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.auth-buttons .btn_quotation {
+  background-color: white;
+}
+
+/* Burger Menu - Hidden by Default */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 15px;
+  }
+
+  .burger-menu {
+      display: block;
+  }
+
+  nav {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #002147;
+      text-align: center;
+      flex-direction: column;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  }
+
+  nav a {
+      display: block;
+      padding: 10px 0;
+  }
+
+  .auth-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+  }
+
+  /* Show Navigation on Click */
+  .show-nav {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.3s linear;
+  }
+}

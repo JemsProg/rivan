@@ -1,0 +1,79 @@
+
+
+.notif_box_1 {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
+}
+
+/* Notification Header */
+.title_notif {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Message Styles */
+.notif_personal_info {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.notif_room_number {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.notif_msg {
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.notif_delete {
+    color: #d9534f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.notif_delete:hover {
+    color: #c9302c;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .notif_box_1 {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title_notif {
+        font-size: 20px;
+    }
+
+    .notif_msg {
+        font-size: 12px;
+    }
+
+    .notif_personal_info, .notif_room_number {
+        font-size: 10px;
+    }
+}

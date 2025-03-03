@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.bg_cover {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+.bg_cover img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.blank_layer {
+    width: 100%;
+    height: 100px;
+}
+
+.rivan_offer {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 300px;
+    padding: 20px 0;
+}
+
+
+.offer_content {
+    width: 300px;
+    height: 600px;
+    margin: 10px;
+}
+
+.img_icon{
+    width: 100px;
+    height: 100px;
+}
+
+.course_page {
+    background-color: #0d2354;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.course_content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 40px 10px;
+}
+
+.course_content img {
+    max-width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+.courese_name {
+    width: 450px;
+    height: 380px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.courese_name h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: left;
+
+    color: #0d2354;
+}
+
+.courese_name h3 {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+    text-align: left;
+
+}
+
+.courese_name p {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+}
