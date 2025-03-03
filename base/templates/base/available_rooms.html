@@ -1,0 +1,33 @@
+{% for room in rooms %}
+
+<div class="room-card">
+    <div class="room-header">
+        <div class="user-info">
+            <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar">
+            <div>
+                <a href="{% url 'user-profile' room.user.id   %}">
+                <p class="name">{{ room.user.first_name }} {{ room.user.last_name }}</p>
+                <p class="role">Alumni</p>
+                </a>
+            </div>
+        </div>
+        <p class="time">10 minutes ago</p>
+        {% if request.user == room.user %}
+        <a href="{% url 'delete-room' room.r_id %}">Delete</a>
+        {% endif %}
+
+    </div>
+    <div class="room-body">
+        <h3 class="room-title">{{ room.r_title }}</h3>
+        <p class="room-description">{{ room.r_description }}</p>
+    </div>
+    <div class="room-footer">
+        <div class="joined-info">
+            <span class="icon">👥</span>
+            <span class="joined-count">100 Joined</span>
+        </div>
+        <a href="{% url 'room' room.r_id %}" class="join-button">Join</a>
+    </div>
+</div>
+
+{% endfor %}

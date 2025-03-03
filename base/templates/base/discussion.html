@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Cards</title>
+<style>
+
+
+.mini_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.tab {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.tab .badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    margin-left: 5px;
+}
+
+.create-room {
+    background-color: #002366;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.create-room:hover {
+    background-color: #001744;
+}
+
+.content_discussion {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.room-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: bold;
+    color: #001744;
+    margin: 0;
+}
+
+.role {
+    color: gray;
+    font-size: 14px;
+    margin: 0;
+}
+
+.time {
+    color: gray;
+    font-size: 14px;
+}
+
+.room-body {
+    margin-bottom: 15px;
+}
+
+.room-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.room-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.room-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.joined-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+}
+
+.join-button {
+    background-color: #002366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-button:hover {
+    background-color: #001744;
+}
+
+</style>
+</head>
+<body>
+    {% extends 'main.html' %}
+
+    {% block content %}
+    <div class="mini_nav">
+        <div class="tabs">
+            <div class="tab active">Available <span class="badge">6</span></div>
+            <div class="tab">Joined</div>
+        </div>
+    </div>
+    <a href="{% url 'create-room' %}" class="create-room" id="create-room">+ Create Room</a>
+
+    <div class="content_discussion">
+
+        {% include 'base/available_rooms.html' %}
+        
+    </div>
+
+      {% endblock content %}
+      
+</body>
+</html>

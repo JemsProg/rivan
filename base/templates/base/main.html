@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Reset margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .content{
+            display: flex;
+            justify-content: center;
+        }
+
+        .main_content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: baseline;
+            width: 900px;
+        }
+
+    </style>
+</head>
+<body>
+  
+        {% include 'nav_elements/nav_top.html' %}
+
+    <!-- Div for main content -->
+    <div class="content">
+
+        <!-- left nav -->
+        <div class="nav-left">
+            {% include 'nav_elements/nav_left.html' %}
+        </div>
+    
+        <div class="main_content">
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+
+        <!-- right nav -->
+        <div class="nav-left">
+            {% include 'nav_elements/nav_right.html' %}
+        </div>
+
+    </div>
+
+</body>
+</html>

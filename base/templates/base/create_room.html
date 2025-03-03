@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends  'main.html' %}
+
+    {% block content %}
+    <form id="create-room-form" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="room_topic">Room Topic</label>
+            <input type="text" name="topic" list="topic-list" placeholder="Enter Room Topic" required>
+            <datalist id="topic-list" >
+                <select id="room_topic">
+                    {% for topic in topics %}
+                    <option value="{{topic.title}}">{{topic.title}}</option>
+
+                    {% endfor %}
+
+                </select>
+
+            </datalist>
+        </div>
+
+        <div>
+            <label for="room_title">Room Title</label>
+            {{form.r_title}}
+        </div>
+
+        <div>
+            <label for="room_description">Description</label>
+            {{form.r_description}}
+        </div>
+
+        <input type="submit" value="+ CREATE">
+    </form>
+
+    {% endblock content %}
+</body>
+</html>

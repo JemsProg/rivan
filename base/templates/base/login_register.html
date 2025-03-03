@@ -1,0 +1,62 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/login_register.css' %}">
+
+    <title>Document</title>
+</head>
+<body>
+
+    {% if page == 'login' %}
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label>Username:</label>
+            <input type="username" name="username" placeholder="Enter Username">
+
+            <label>Password :</label>
+            <input type="password" name="password" placeholder="Enter Password">
+
+            <input type="submit" value="Login">
+            {% if messages %} 
+            <ul class="messages"> {% for message in messages %} 
+                <li>{{ message }}</li> 
+                {% endfor %} 
+            </ul> 
+            {% endif %} 
+
+        </form>
+
+        <a href="{% url 'register' %}">Sign Up</a>
+        
+    </div>
+
+    {% else %}
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <input type="submit" value="Register">
+        </form>
+        {% if messages %} 
+        <ul class="messages"> {% for message in messages %} 
+            <li>{{ message }}</li> 
+            {% endfor %} 
+        </ul> 
+        {% endif %} 
+        
+        <a href="{% url 'login' %}">Already have an account</a>
+
+    </div>
+
+    {% endif %}
+</body>
+</html>

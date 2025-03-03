@@ -1,0 +1,33 @@
+{% extends  'main.html' %}
+{% block content %}
+
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" media="screen"  href="{% static 'styles/Notification.css' %}">
+
+
+
+
+<div class="notif_box_1">
+    <h1 class="title_notif">Notification</h1>
+    <hr>
+    {% for message in room_message %}
+        <div>
+            <small class="notif_personal_info"><a href="{% url 'user-profile' message.user.id %}"> @{{message.user}} </a> {{message.rm_date_created|timesince}} ago</small>
+            <small class="notif_room_number">replied to "{{message.room}}"</small>
+
+            <p class="notif_msg">{{message.rm_message}}</p>
+
+            {% if request.user == message.user %}
+            <a class="notif_delete" href="{% url 'delete-message' message.id %}">Delete</a>
+            {% endif %}
+            <hr>
+        </div>
+
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}
